@@ -128,6 +128,12 @@ while True:
                 pygame.quit()
                 sys.exit()
 
+
+        if bird_obj.y + bird.get_height() > WINDOW_HEIGHT - floor_height:
+            print("collision")
+            pygame.quit()
+            sys.exit()
+    
     # scoring 
     for pipe_objs in pipes:
         if pipe_objs.x == bird_obj.x:
